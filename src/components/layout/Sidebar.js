@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
-import {
-  FaChevronDown,
-  FaInbox,
-  FaRegCalendarAlt,
-  FaRegCalendar,
-} from 'react-icons/fa';
-import { Projects } from '../Projects';
+import { FaInbox, FaRegCalendarAlt, FaRegCalendar } from 'react-icons/fa';
 import { useSelectedProjectValue } from '../../context';
-import { AddProject } from '../AddProject';
 
 export const Sidebar = () => {
   const { setSelectedProject } = useSelectedProjectValue();
   const [active, setActive] = useState('inbox');
-  const [showProjects, setShowProjects] = useState(true);
 
   return (
     <div className="sidebar" data-testid="sidebar">
@@ -96,27 +88,6 @@ export const Sidebar = () => {
           </div>
         </li>
       </ul>
-      {/* <div
-        className="sidebar__middle"
-        aria-label="Show/hide projects"
-        onClick={() => setShowProjects(!showProjects)}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter') setShowProjects(!showProjects);
-        }}
-        role="button"
-        tabIndex={0}
-      >
-        <span>
-          <FaChevronDown
-            className={!showProjects ? 'hidden-projects' : undefined}
-          />
-        </span>
-        <h2>Projects</h2>
-      </div>
-
-      <ul className="sidebar__projects">{showProjects && <Projects />}</ul>
-
-      {showProjects && <AddProject />} */}
     </div>
   );
 };
