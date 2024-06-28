@@ -96,7 +96,7 @@ export const Sidebar = () => {
           </div>
         </li>
       </ul>
-      <div
+      {/* <div
         className="sidebar__middle"
         aria-label="Show/hide projects"
         onClick={() => setShowProjects(!showProjects)}
@@ -116,7 +116,7 @@ export const Sidebar = () => {
 
       <ul className="sidebar__projects">{showProjects && <Projects />}</ul>
 
-      {showProjects && <AddProject />}
+      {showProjects && <AddProject />} */}
     </div>
   );
 };
